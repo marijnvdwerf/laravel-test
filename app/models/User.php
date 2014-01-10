@@ -17,4 +17,8 @@ class User extends Eloquent {
 	 */
 	protected $hidden = array('password', 'role', 'updated_at', 'created_at');
 
+    public function portfolioItems() {
+        return $this->hasMany('PortfolioItem');
+    }
+
 }

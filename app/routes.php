@@ -17,3 +17,4 @@ Route::get('/', function()
 });
 
 Route::resource('pupils', 'PupilController');
+Route::get('pupils/{pupilId}/portfolio_items', 'PortfolioItemController@indexForPupil');
