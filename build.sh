@@ -10,8 +10,8 @@ if ! type /usr/local/bin/composer > /dev/null 2>&1; then
     fi
 
     echo 'Installing composer using Homebrew'
-    brew tap josegonzalez/homebrew-php
-    brew install josegonzalez/php/composer
+    /usr/local/bin/brew tap josegonzalez/homebrew-php
+    /usr/local/bin/brew install josegonzalez/php/composer
 fi
 
 # Check composer installation
@@ -24,10 +24,10 @@ if ! type /usr/local/bin/phpunit > /dev/null 2>&1; then
     fi
     
     echo 'Installing phpunit'
-    wget https://phar.phpunit.de/phpunit.phar
-    chmod +x phpunit.phar
-    mv phpunit.phar /usr/local/bin/phpunit
-    phpunit --version
+    /usr/local/bin/wget https://phar.phpunit.de/phpunit.phar
+    /bin/chmod +x phpunit.phar
+    /bin/mv phpunit.phar /usr/local/bin/phpunit
+    /usr/local/bin/phpunitphpunit --version
 fi
 
 echo 'Fetching dependencies'
