@@ -15,4 +15,22 @@
             <directory>./app/tests/</directory>
         </testsuite>
     </testsuites>
+
+    <filter>
+        <whitelist >
+            <directory suffix=".php">app</directory>
+            <exclude>
+                <directory suffix=".php">app/config</directory>
+                <directory suffix=".php">app/tests</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+
+    <logging>
+        <log type="coverage-html" target="reports/coverage/" charset="UTF-8"
+             lowUpperBound="40" highLowerBound="80"/>
+        <log type="coverage-clover" target="reports/coverage/clover.xml"/>
+        <log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>
+        <log type="junit" target="reports/unit-tests/junit.xml"/>
+    </logging>
 </phpunit>
