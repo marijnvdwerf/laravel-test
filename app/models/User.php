@@ -15,6 +15,6 @@ class User extends Eloquent {
 	 *
 	 * @var array
 	 */
-	protected $hidden = array('password', 'updated_at', 'created_at');
+	protected $hidden = array('password', 'role', 'updated_at', 'created_at');
 
 }
