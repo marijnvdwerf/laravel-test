@@ -31,6 +31,9 @@ if ! type /usr/local/bin/phpunit > /dev/null 2>&1; then
     /usr/local/bin/phpunit --version
 fi
 
+echo 'Add different PHP distribution to path'
+PATH=/usr/local/php5/bin:$PATH
+
 echo 'Fetching dependencies'
 /usr/local/bin/composer install
 
